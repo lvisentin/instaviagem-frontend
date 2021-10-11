@@ -1,0 +1,50 @@
+@import '../../common/styles/placeholders.scss';
+
+.places-list-wrapper {
+  @extend %df-aic-fww-jcsb;
+
+  .place {
+    width: 30%;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    .mat-card {
+      height: 210px;
+      @extend %df-aifs-jcc-fdc;
+    }
+
+    .content {
+      @extend %df-aic;
+    }
+
+    .place-image {
+      max-width: 200px;
+      max-height: 150px;
+      // min-height: 150px;
+      border-radius: 8px;
+    }
+
+    .place-data {
+      padding: 0 16px;
+
+      .description {
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .price {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 969px) {
+    .place {
+      width: 100%;
+    }
+  }
+}

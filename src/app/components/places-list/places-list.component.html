@@ -1,0 +1,16 @@
+<div class="places-list-wrapper">
+  <div class="place" *ngFor="let place of places" (click)="handlePlaceClick(place)">
+    <mat-card>
+      <mat-card-title class="title">{{place.name}}</mat-card-title>
+      <mat-card-subtitle class="subtitle">{{place.phone}} - {{place.address}}</mat-card-subtitle>
+
+      <mat-card-content class="content">
+        <img [src]="place.image" class="place-image" />
+        <div class="place-data">
+          <p class="description">{{place.about}}</p>
+          <p class="price">{{place.price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}}</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

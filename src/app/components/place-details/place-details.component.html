@@ -1,0 +1,20 @@
+<div class="place-details-wrapper">
+    <aside class="place-details-image-aside">
+      <div class="place-details-image">
+        <img [src]="data.place.image" />
+      </div>
+    </aside>
+
+    <aside class="place-details-data-aside">
+      <div class="place-details-title">
+        <h2 class="name">{{data.place.name}}</h2>
+        <button mat-icon-button [color]="isFavoritePlace? 'warn' : 'disabled'" (click)="handleFavoritePlace()">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
+
+      <p class="location">Located in: {{data.place.address}}</p>
+      <p class="description">{{data.place.about}}</p>
+      <p class="price">{{data.place.price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}}</p>
+    </aside>
+</div>

@@ -1,0 +1,45 @@
+@import '../../common/styles/placeholders.scss';
+
+.place-details-wrapper {
+  .place-details-image-aside {
+    .place-details-image {
+      img {
+        max-width: 350px;
+        max-height: 350px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .place-details-data-aside {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+
+    .place-details-title {
+      @extend %df-aic-jcsb;
+
+      .name {
+        margin-bottom: 0;
+      }
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .location {
+      font-size: 12px;
+      color: #676767;
+    }
+  }
+
+  @media only screen and (max-width: 969px) {
+    .place-details-image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
